@@ -1,0 +1,10 @@
+library(apcluster)
+
+cl1 <- cbind(rnorm(30,0.3,0.05), rnorm(30,0.7,0.04))
+cl2 <- cbind(rnorm(30,0.7,0.04), rnorm(30,0.4,0.05))
+x1 <- rbind(cl1,cl2)
+plot(x1,xlab="",ylab="",pch=19,cex=0.8)
+apres <- apcluster(negDistMat(r=2), x1)
+print(apres)
+plot(apres, x1)
+heatmap(apres)

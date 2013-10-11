@@ -1,0 +1,8 @@
+library(apcluster)
+library(kernlab)
+promSim <- kernelMatrix(stringdot(length=6, type="spectrum"), ch22Promoters)
+rownames(promSim) <- names(ch22Promoters)
+colnames(promSim) <- names(ch22Promoters)
+promAP <- apcluster(promSim, q=0)
+print(promAP)
+heatmap(promAP, promSim, Rowv=FALSE, Colv=FALSE)
