@@ -1,0 +1,4 @@
+AffinityPropagation
+===================
+
+Affinity Propagation Presentation
